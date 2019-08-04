@@ -6,7 +6,7 @@
 public class Driver {
 	public static void main (String [] args) {
 
-		new FrameSwing("Calculator");
+	//	new FrameSwing("Calculator");
 	}
 
 }

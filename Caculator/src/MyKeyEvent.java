@@ -21,3 +21,13 @@ public class MyKeyEvent implements KeyListener {
         displayInfo(e, "KEY TYPED: ");
     }
 
+
+    public void keyPressed(KeyEvent e) {
+        //displayInfo(e, "KEY PRESSED: ");
+    }
+
+    public void keyReleased(KeyEvent e) {
+        //displayInfo(e, "KEY RELEASED: ");
+    }
+
+}

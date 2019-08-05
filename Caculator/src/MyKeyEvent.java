@@ -18,7 +18,7 @@ public class MyKeyEvent implements KeyListener {
 
 
     public void keyTyped(KeyEvent e) {
-        displayInfo(e, "KEY TYPED: ");
+      //  displayInfo(e, "KEY TYPED: ");
     }
 
 

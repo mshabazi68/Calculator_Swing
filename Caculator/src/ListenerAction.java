@@ -24,10 +24,24 @@ public class ListenerAction extends Component implements ActionListener {
 
 
 // method for mouse listener
-   
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+
+        String key = e.getActionCommand();
+        String keyString = swingCalculator.text.getText();
+        if (key.equals("\n") || key.equals("=") ) {
+            keyString = compute.searchPranteste(keyString);
+        }
+        else{
+            keyString = getString.getText(key,keyString);
+        }
+        swingCalculator.text.setText(keyString);
+    }
 
 
  //Quick and dirty way to find double of the same operator
+    
 }
 
 

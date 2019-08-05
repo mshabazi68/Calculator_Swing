@@ -1,5 +1,6 @@
 /*
 	@author Mohammadreza Shahbazi Jalali
+	Due date : 9/18/2018
 	Class name: Comp 585
 	Purpose : Frame class
  */
@@ -103,4 +104,39 @@ public class FrameSwing extends JFrame {
     private void aboutActionPerformed(){
         JOptionPane.showMessageDialog(this, "My first calculator");
     }
+    private JPanel creatGridlayout() {
+        // using \u2797 for deviation
+        // using \u2715 for multiplication
+        String[] calnumber = {"C", 	"\u232B", "%","mod", "7", "8", "9", "\u00f7", "4", "5", "6", "*", "1", "2", "3", "+", "+/-", "0", ".", "-", "(", ")", "","="};
+
+        ActionListener keypad = new ListenerAction();
+        JPanel panel1 = new JPanel();
+        newkey = new MyKeyEvent();
+        panel1.setBackground(Color.darkGray);
+        panel1.setLayout(new GridLayout(6, 6, 2, 2));
+
+        for (String btn : calnumber) {
+            JButton button = new JButton(String.valueOf(btn));
+            button.setBackground(Color.BLACK);
+            button.setForeground(Color.ORANGE);
+            button.addActionListener(keypad);
+            button.addKeyListener(newkey);
+            button.setFont(MIDEUM_FONT);
+            panel1.add(button);
+        }
+        //add(panel1,BorderLayout.CENTER);
+        return panel1;
+
+    }
+//Here we create the text filed method is self explanatory.
+    private void creatTextfiled() {
+        newkey = new MyKeyEvent();
+        text = new JTextField("0", 12);
+        text.addKeyListener(newkey);
+        text.setFont(LARGE_FONT);
+        text.setHorizontalAlignment(JTextField.RIGHT);
+        text.setEditable(false);
+
+    }
+
 }

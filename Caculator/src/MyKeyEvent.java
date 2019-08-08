@@ -1,6 +1,5 @@
 /*
 	@author Mohammadreza Shahbazi Jalali
-	
 	Class name: Comp 585
 	Purpose : This Class will initiate the keyListener for Keyboard.
  */
@@ -18,9 +17,8 @@ public class MyKeyEvent implements KeyListener {
 
 
     public void keyTyped(KeyEvent e) {
-      //  displayInfo(e, "KEY TYPED: ");
+        displayInfo(e, "KEY TYPED: ");
     }
-
 
     public void keyPressed(KeyEvent e) {
         //displayInfo(e, "KEY PRESSED: ");
@@ -29,5 +27,24 @@ public class MyKeyEvent implements KeyListener {
     public void keyReleased(KeyEvent e) {
         //displayInfo(e, "KEY RELEASED: ");
     }
+// passing the key String here also the key event
+    private void displayInfo(KeyEvent e, String keyStatus) {
+
+        //swingCalculator.text.setText();
+        String key = Character.toString(e.getKeyChar());
+        String keyString = swingCalculator.text.getText();
+        if (key.equals("\n") || key.equals("=") ) {
+            keyString = compute.searchPranteste(keyString);
+        }
+        else{
+            keyString = getString.getText(key,keyString);
+        }
+
+        swingCalculator.text.setText(keyString);
+
+    }
+
 
 }
+
+

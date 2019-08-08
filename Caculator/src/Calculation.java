@@ -1,6 +1,5 @@
 /*
 	@author Mohammadreza Shahbazi Jalali
-	Due date : 9/18/2018
 	Class name: Comp 585
 	Purpose : This class does the  Calculation of calculator .
  */
